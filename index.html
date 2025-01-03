@@ -287,7 +287,13 @@
             state.wrongItems.add(state.currentIndex);
             elements.wrongItems.style.display = 'block';
             elements.wrongCount.textContent = state.wrongItems.size;
-            nextQuestion();
+
+            // 答えを表示
+            elements.answerBox.style.display = 'block';
+            elements.answer.textContent = state.quizData[state.currentIndex].センテンス;
+            elements.showAnswerBtn.style.display = 'none';
+            elements.wrongBtn.style.display = 'none';
+            elements.nextBtn.style.display = 'block';
         }
 
         function updateProgress() {
